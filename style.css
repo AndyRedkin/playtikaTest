@@ -3,7 +3,8 @@ html, body, #app {
     height: 100%;
     background: #5c5c5c;
 }
-button:focus{
+
+button:focus {
     outline: none;
 }
 
@@ -13,6 +14,33 @@ button:focus{
     align-items: center;
     flex-flow: row wrap;
     font-size: 16px;
+}
+
+.game{
+    position: relative;
+}
+
+.winner{
+    display: none;
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    background: #78d42c;
+    border: 1px solid green;
+    border-radius: 20px;
+    top: calc(50% - (100px / 2));
+    left: calc(50% - (250px / 2));
+    color: #fff;
+}
+
+.winner h3 {
+    margin: 5px 0 15px;
+    text-align: center;
+}
+
+.winner__text {
+    font-size: 2rem;
+    text-align: center;
 }
 
 .account {
@@ -91,10 +119,11 @@ button:focus{
     background: rgba(0, 128, 0, 0.8);
 }
 
-.spinner__bet-select .select__btn.select__btn--up{
+.spinner__bet-select .select__btn.select__btn--up {
     border-radius: 20px 0 0 20px;
 }
-.spinner__bet-select .select__btn.select__btn--down{
+
+.spinner__bet-select .select__btn.select__btn--down {
     border-radius: 0 20px 20px 0;
 }
 
@@ -115,11 +144,12 @@ button:focus{
     background: #008000;
     color: #fff;
 }
+
 .spinner__controls-btn:hover {
     background: rgba(0, 128, 0, 0.8);
 }
 
-.spinner__controls-btn .loader{
+.spinner__controls-btn .loader {
     font-size: 4px;
     max-height: 100%;
     margin: 0 auto;
