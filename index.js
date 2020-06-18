@@ -49,7 +49,7 @@ const App = function() {
   this.updateAccountData = (data) => {
     this.store = {
       ...this.store,
-      accountData: data,
+      accountData: Object.assign(this.store.accountData, data),
     };
   };
   this.updateBet = (data) => {
@@ -177,6 +177,7 @@ const App = function() {
     });
   };
   const selectHandleChange = (event) => {
+    console.log(this.store)
     const currentBet = this.store.bet;
     const {bets} = this.store.accountData;
     let newBet = '';
